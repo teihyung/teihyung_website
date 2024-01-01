@@ -3,105 +3,200 @@
     --text-color: #f0f4f5;
     --background-color: #263343;
     --accent-color: #d49466;
-  }
-  
-  * {
+}
+
+* {
     /* Tells the browser to account for any border and 
     padding in the values you specify for an element's 
     width and height. */
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+
+
+body {
     margin: 0;
-    font-family: 'Source Sans Pro';
-  }
-  
-  a {
+    font-family: 'Source Sans Pro', serif;
+}
+
+a {
     text-decoration: none;
     color: var(--text-color);
-  }
-  
-  /* Nav container */
-  .navbar {
+}
+
+/* Nav container */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 12px;
     background-color: var(--background-color);
-  }
-  
-  /* Logo with text */
-  .navbar__logo {
-    font-size: 24px;
+    /*position: fixed; !* Add this line *!*/
+    width: 100%; /* Ensure it spans the full width of the viewport */
+}
+
+/* Logo with text */
+.navbar__logo {
+   padding-left : 20px;
+    font-size: 20px;
     color: var(--text-color);
-  }
-  
-  .navbar__logo i {
+}
+
+.navbar__logo i {
     color: var(--accent-color);
-  }
-  
-  /* Menu */
-  .navbar__menu {
+}
+
+/* Menu */
+.navbar__menu {
     display: flex;
     padding-left: 0;
     list-style: none;
-    font-size: 22px;
+    font-size: 18px;
     align-items: center;
-    padding-left: 10px;
-  }
-  
-  .navbar__menu li {
+
+    padding-right : 20px;
+}
+
+.navbar__menu li {
     padding: 7px 40px;
-    
-  }
-  
-  .navbar__menu li:hover {
+    margin-right: 10px;
+}
+
+.navbar__menu li:hover {
     background-color: #d49466;
     border-radius: 40px;
-  }
+}
 
-  
-  /* Toggle button */
-  .navbar__toggleBtn {
+
+/* Toggle button */
+.navbar__toggleBtn {
     display: none;
     position: absolute;
     right: 32px;
     font-size: 24px;
     color: var(--accent-color);
-  }
-  
-  /* For small screen */
-  @media screen and (max-width: 768px) {
+}
+
+.Bottom_bar {
+    overflow: hidden;
+    background-color: #263343;
+    color: var(--text-color);
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    height: 7%;
+    width: 100%;
+}
+
+.fa-2xl {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* home page */
+.Home {
+    position: relative;
+    z-index: 1; /* Set a z-index higher than the background */
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+}
+
+
+.Home_Container {
+    max-width: 800px; /* Adjust as needed */
+    /*margin: auto;*/
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: white; /* Card background */
+    border-radius: 15px; /* round card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.content p,
+.content h1,
+.content h2 {
+    margin: 10px 0;
+}
+
+.content h1 {
+    color: #333;
+    font-size: 2em;
+}
+
+.content h2 {
+    color: #666;
+    font-size: 1.5em;
+}
+
+.content p {
+    color: #999;
+}
+
+.email{
+    margin-top: 20px;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%; /* Full width */
+    margin: 10px 0; /* Spacing between form elements */
+    padding: 8px; /* Padding for better user experience */
+
+}
+
+form textarea {
+    height: 100px; /* Adjust height as needed */
+}
+
+
+.email h2{
+    color: #333;
+}
+.email p{
+    color: #333;
+}
+
+
+/* For small screen */
+@media screen and (max-width: 1200px) {
     /* Nav container */
     .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 8px 24px;
-    }
-  
-    /* Menu */
-    .navbar__menu {
-      display: none;
-      flex-direction: column;
-      text-align: center;
-      width: 100%;
-    }
-  
-    .navbar__menu a {
-      /* Fill in an entire line so that user can click on any space */
-      display: block;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
     }
 
-  
+    /* Menu */
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar__menu a {
+        /* Fill in an entire line so that user can click on any space */
+        display: block;
+    }
+
+
     /* Toggle button */
     .navbar__toggleBtn {
-      display: block;
+        display: block;
     }
-  
+
     /* When toggle button is clicked - active state */
     .navbar__menu.active,
     .navbar__icons.active {
-      display: flex;
+        display: flex;
     }
-  }
+}
