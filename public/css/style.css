@@ -94,6 +94,7 @@ a {
 
 /* home page */
 .Home {
+
     position: relative;
     z-index: 1; /* Set a z-index higher than the background */
     color: var(--text-color);
@@ -105,10 +106,16 @@ a {
 
 
 .Home_Container {
+    opacity: 0;
+    transition: opacity 1.1s ease-in-out;
     max-width: 800px; /* Adjust as needed */
     /*margin: auto;*/
     padding: 20px;
     margin-bottom: 20px;
+}
+
+.Home_Container.visible {
+    opacity: 1;
 }
 
 .card {
@@ -141,6 +148,9 @@ a {
 }
 
 .email{
+    opacity: 0;
+    transition: opacity 1.1s ease-in-out;
+
     margin-top: 20px;
 }
 
@@ -163,6 +173,97 @@ form textarea {
 }
 .email p{
     color: #333;
+}
+
+.email.visible {
+    opacity: 1;
+}
+
+.languages{
+    opacity: 0;
+    transition: opacity 1.1s ease-in-out;
+
+    position: relative;
+    z-index: 1; /* Set a z-index higher than the background */
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+}
+
+.languages p{
+
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #d49466;
+    color: var(--text-color);
+}
+
+.languages.visible {
+    opacity: 1;
+}
+
+.interest{
+    opacity: 0;
+    transition: opacity 1.1s ease-in-out;
+
+    position: relative;
+    z-index: 1; /* Set a z-index higher than the background */
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+}
+
+.interest p{
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #d49466;
+    color: var(--text-color);
+}
+
+.interest.visible {
+    opacity: 1;
+}
+
+.skill-container {
+    display: flex;
+    justify-content: center; /* This centers the flex items horizontally */
+    align-items: flex-start; /* This aligns the flex items to the top */
+    gap: 20px; /* This adds space between the flex items */
+}
+
+.used_skill{
+    opacity: 0; /* Start with the card being invisible */
+    transition: opacity 1.1s ease-in-out; /* Transition effect for the opacity */
+
+
+    position: relative;
+    z-index: 1; /* Set a z-index higher than the background */
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+}
+
+.used_skill.visible {
+    opacity: 1;
+}
+
+.used_skill p{
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #d49466;
+    color: var(--text-color);
 }
 
 
