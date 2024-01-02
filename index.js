@@ -10,7 +10,6 @@ app.set('views', path.join(__dirname, 'views'));
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes that render EJS templates
 app.get('/', (req, res) => {
     res.render('index'); // Renders views/index.ejs
 });
@@ -28,5 +27,7 @@ app.get('/used-in-website', (req, res) => {
 });
 
 // Start the server
-app.listen(port, () => console.log(`App is listening on port ${port}!`));
+app.listen(port, () => {
+    console.log(`The app has started on PORT ${port}`);
+});
 
