@@ -96,7 +96,7 @@ a {
 .Home {
 
     position: relative;
-    z-index: 1; /* Set a z-index higher than the background */
+    z-index: 1; /* Set a z-index higher than the background.ejs */
     color: var(--text-color);
     display: flex;
     justify-content: center;
@@ -119,7 +119,7 @@ a {
 }
 
 .card {
-    background-color: white; /* Card background */
+    background-color: white; /* Card background.ejs */
     border-radius: 15px; /* round card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -184,7 +184,7 @@ form textarea {
     transition: opacity 1.1s ease-in-out;
 
     position: relative;
-    z-index: 1; /* Set a z-index higher than the background */
+    z-index: 1; /* Set a z-index higher than the background.ejs */
     color: var(--text-color);
     display: flex;
     justify-content: center;
@@ -211,7 +211,7 @@ form textarea {
     transition: opacity 1.1s ease-in-out;
 
     position: relative;
-    z-index: 1; /* Set a z-index higher than the background */
+    z-index: 1; /* Set a z-index higher than the background.ejs */
     color: var(--text-color);
     display: flex;
     justify-content: center;
@@ -245,7 +245,7 @@ form textarea {
 
 
     position: relative;
-    z-index: 1; /* Set a z-index higher than the background */
+    z-index: 1; /* Set a z-index higher than the background.ejs */
     color: var(--text-color);
     display: flex;
     justify-content: center;
