@@ -94,7 +94,6 @@ a {
 
 /* home page */
 .Home {
-
     position: relative;
     z-index: 1; /* Set a z-index higher than the background.ejs */
     color: var(--text-color);
@@ -342,23 +341,24 @@ form textarea {
         overflow-y: auto; /* Add scroll to the home page content */
     }
 
-    .Home_Container,
-    .email {
-        /*max-width: 600px; !* Maximum width of the cards *!*/
-        /*margin: 10px 0; !* Margin for top and bottom *!*/
-        box-sizing: border-box; /* Include padding and border in the width */
-        opacity: 1; /* Make cards visible */
-        transition: none; /* Disable the transition on small screens */
-    }
 
-    .card {
-        /*margin-bottom: 20px; !* Add some space between the cards *!*/
-        /* If your cards have a fixed height, you might want to make them more responsive: */
-        overflow-y: auto; /* Add scroll to card content if it overflows */
+    .used_skill{
+        flex-direction: column;
+        justify-content: center; /* This will center the content vertically */
+        align-items: center; /* This will center the content horizontally */
+        overflow-y: auto;
     }
 }
 
 @media (max-height: 750px){
+    .used_skill{
+        padding-top: 30vh;
+        max-height: 100vh;
+        flex-direction: column;
+        justify-content: center; /* This will center the content vertically */
+        align-items: center; /* This will center the content horizontally */
+        overflow-y: auto;
+    }
     .Home_Container {
         padding-top: 20vh;
     }
