@@ -38,4 +38,10 @@ window.addEventListener('load', function() {
   }, 400); // The delay before the class is added, in milliseconds
 });
 
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.querySelector('.project').classList.add('visible');
+  }, 400); // The delay before the class is added, in milliseconds
+});
+
 

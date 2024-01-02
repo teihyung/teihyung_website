@@ -266,6 +266,36 @@ form textarea {
     color: var(--text-color);
 }
 
+.project{
+    opacity: 0; /* Start with the card being invisible */
+    transition: opacity 1.1s ease-in-out; /* Transition effect for the opacity */
+    position: relative;
+    z-index: 1; /* Set a z-index higher than the background.ejs */
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+}
+
+.project.visible {
+    opacity: 1;
+}
+
+.project h2{
+    color: #333;
+}
+
+.project p{
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #d49466;
+    color: var(--text-color);
+
+}
+
 
 /* For small screen */
 @media screen and (max-width: 1200px) {
@@ -304,27 +334,38 @@ form textarea {
 
 @media (max-width: 800px) {
     .Home {
-        display: flex;
+        /*display: flex;*/
+        max-height: 100vh; /* Adjust as needed */
         flex-direction: column;
         justify-content: center; /* This will center the content vertically */
         align-items: center; /* This will center the content horizontally */
-        height: 100vh; /* Use the full screen height */
-        padding: 10px; /* Add some padding */
+        overflow-y: auto; /* Add scroll to the home page content */
     }
 
     .Home_Container,
     .email {
-        width: 100%; /* Full width of the flex container */
-        max-width: 600px; /* Maximum width of the cards */
-        margin: 10px 0; /* Margin for top and bottom */
+        /*max-width: 600px; !* Maximum width of the cards *!*/
+        /*margin: 10px 0; !* Margin for top and bottom *!*/
         box-sizing: border-box; /* Include padding and border in the width */
         opacity: 1; /* Make cards visible */
         transition: none; /* Disable the transition on small screens */
     }
 
     .card {
-        margin-bottom: 20px; /* Add some space between the cards */
+        /*margin-bottom: 20px; !* Add some space between the cards *!*/
         /* If your cards have a fixed height, you might want to make them more responsive: */
-        height: auto;
         overflow-y: auto; /* Add scroll to card content if it overflows */
-    }}
+    }
+}
+
+@media (max-height: 750px){
+    .Home_Container {
+        padding-top: 20vh;
+    }
+    .Home_Container .card {
+        /*margin-bottom: 20px; !* Add some space between the cards *!*/
+        /* If your cards have a fixed height, you might want to make them more responsive: */
+
+        max-height: 100vh; /* Adjust as needed */
+    }
+}
