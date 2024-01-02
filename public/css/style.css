@@ -301,3 +301,30 @@ form textarea {
         display: flex;
     }
 }
+
+@media (max-width: 800px) {
+    .Home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* This will center the content vertically */
+        align-items: center; /* This will center the content horizontally */
+        height: 100vh; /* Use the full screen height */
+        padding: 10px; /* Add some padding */
+    }
+
+    .Home_Container,
+    .email {
+        width: 100%; /* Full width of the flex container */
+        max-width: 600px; /* Maximum width of the cards */
+        margin: 10px 0; /* Margin for top and bottom */
+        box-sizing: border-box; /* Include padding and border in the width */
+        opacity: 1; /* Make cards visible */
+        transition: none; /* Disable the transition on small screens */
+    }
+
+    .card {
+        margin-bottom: 20px; /* Add some space between the cards */
+        /* If your cards have a fixed height, you might want to make them more responsive: */
+        height: auto;
+        overflow-y: auto; /* Add scroll to card content if it overflows */
+    }}
