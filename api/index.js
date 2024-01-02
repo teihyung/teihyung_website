@@ -29,3 +29,5 @@ app.get('/used-in-website', (req, res) => {
 
 // Start the server
 app.listen(port, () => console.log(`App is listening on port ${port}!`));
+
+module.exports = app
