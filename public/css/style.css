@@ -361,7 +361,7 @@ form textarea {
         overflow-y: auto;
     }
     .Home_Container {
-        padding-top: 20vh;
+       margin-top: 20vh;
     }
     .Home_Container .card {
         /*margin-bottom: 20px; !* Add some space between the cards *!*/
