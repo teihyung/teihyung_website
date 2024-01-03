@@ -347,6 +347,7 @@ form textarea {
         justify-content: center; /* This will center the content vertically */
         align-items: center; /* This will center the content horizontally */
         overflow-y: auto;
+        max-height: 100vh;
     }
 }
 
