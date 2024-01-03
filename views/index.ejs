@@ -2,6 +2,26 @@
 
 <%- include('templates/background') %>
 
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevents the default form submission
+
+        const formData = new FormData(this);
+        fetch('/', {
+            method: 'POST',
+            body: formData
+        }).then(response => response.json())
+            .then(data => {
+                const messageElement = document.getElementById('message');
+                messageElement.textContent = data.message;
+                messageElement.style.color = data.success ? 'green' : 'red';
+                messageElement.style.display = 'block';
+            }).catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>
+
 
 <div class="Home">
     <div class="Home_Container">
@@ -18,23 +38,27 @@
     <br>
     <div class="email">
         <article class="card">
-            <form>
+            <form action="/" method="POST">
                 <h2>If you have any inquires please fill in the form and submit</h2>
-                <input type="text" placeholder="Email Address" required="required">
+                <input type="text" name="email" placeholder="Email Address" required="required">
 
                 <br>
 
-                <input type="text" placeholder="Subject" required="required">
+                <input type="text" name="name" placeholder="Name" required="required">
 
                 <br>
-                <textarea placeholder="Message"></textarea>
+                <textarea name="content" placeholder="Message"></textarea>
 
                 <br>
 
-                <button type="submit">Submit</button>
+                <input type="submit" value="Submit">
             </form>
+            <% if (message) { %>
+                <p style="color: <%= message.success ? 'green' : 'red' %>;"><%= message.text %></p>
+            <% } %>
         </article>
     </div>
+
 </div>
 
 
